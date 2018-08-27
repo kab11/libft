@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   makecat.c                                          :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/18 13:59:37 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/18 14:01:17 by kblack           ###   ########.fr       */
+/*   Created: 2018/08/08 23:43:02 by kblack            #+#    #+#             */
+/*   Updated: 2018/08/08 23:43:46 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int main()
+int		*ft_range(int min, int max)
 {
-	char dst[50] = "This is ";
-	char src[50] = "a string";
+	int	count;
+	int	*str;
 
-	ft_strcat(dst, src);
+	count = 0;
+	str = (int*)malloc(sizeof(int) * (max -min));
 
-	printf("%s", dst);
-
-	return (0);
+	if (min >= max)
+	{
+		return (0);
+	}
+	while (min < max)
+	{
+		str[count] = min;
+		min++;
+		count++;
+	}
+	str[count] = '\0';
+	return (str);
 }

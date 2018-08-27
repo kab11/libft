@@ -6,16 +6,13 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/20 10:43:08 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/20 10:44:45 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/19 00:42:43 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int	ft_isprint(int c)
 {
-	if (c >= 32 && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (0x20 <= c && c <= 0x7E);
 }

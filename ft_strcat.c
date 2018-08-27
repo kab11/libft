@@ -6,17 +6,27 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 08:29:59 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/22 21:52:19 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/18 23:55:23 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void	ft_strcat(char *str1, char *str2)
+char	*ft_strcat(char *restrict s1, const char *restrict s2)
 {
-	while (*str1 != '\0')
-		str1++;
-	while (*str2 != '\0')
-		*str1++ = *str2++;
-	*str1 = '\0';
+	int i;
+	int j;
+
+	i = 0;
+	j = 0;
+	while (s1[i])
+		i++;
+	while (s2[j])
+	{
+		s1[i] = s2[j];
+		i++;
+		j++;
+	}
+	s1[i] = '\0';
+	return (s1);
 }

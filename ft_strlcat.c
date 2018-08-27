@@ -6,49 +6,37 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 17:13:56 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/22 21:40:47 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/15 20:32:39 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "includes/libft.h"
 
-int ft_strlen(char *str)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	int i;
-	i = 0;
+	unsigned	int c1;
+	unsigned	int c2;
+	unsigned	int c3;
 
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	len;
-	size_t	len1;
-
-	if (dst == NULL || src == NULL || size == 0)
-		return (0);
-	i = 0;
-	len = 0;
-	len1 = ft_strlen(dst);
-	while (dst[len] && len < size)
-		len++;
-	if (!(len < size))
-		return (size + ft_strlen(src));
-	while (src[i] && i < (size - len1 - 1))
+	c1 = 0;
+	c2 = 0;
+	c3 = 0;
+	while (dest[c1] != '\0')
+		c1++;
+	while (src[c3] != '\0')
+		c3++;
+	if (c1 <= size)
 	{
-		dst[len + i] = ((char *)src)[i];
-		i++;
+		while (src[c2] != '\0' && c2 < (size - c1 - 1))
+		{
+			dest[c2 + c1] = src[c2];
+			c2++;
+		}
 	}
-	dst[len + i] = '\0';
-	return (len + ft_strlen(src));
-}
-
-int main(int argc, char **argv)
-{
-	ft_strlcat(argv[0], argv[1], 10);
-	return 0;
+	if (size != 0 && c1 <= size)
+		dest[c1 + c2] = '\0';
+	if (c1 > size)
+		return (size + c3);
+	else
+		return (c1 + c3);
 }

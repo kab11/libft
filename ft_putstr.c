@@ -6,15 +6,16 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/21 12:35:34 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/22 21:39:24 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/23 03:24:33 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>i
-#include "libft.h"
+#include "includes/libft.h"
 
 void	ft_putstr(char const *s)
 {
+	if (!s)
+		;
 	while (*s != '\0')
 		write(1, &*s++, 1);
 }

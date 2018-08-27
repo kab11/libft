@@ -6,14 +6,13 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/21 12:30:40 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/21 12:35:08 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/22 23:39:05 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.g"
+#include "includes/libft.h"
 
 void	ft_putchar(char c)
 {
-	write(1, &c, 1);
+	ft_putchar_fd(c, 1);
 }

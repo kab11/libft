@@ -6,13 +6,14 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/22 23:17:57 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/22 23:20:13 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/15 20:39:13 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-void ft_putendl(char const *s)
+void	ft_putendl(char const *s)
 {
-	ft_putendl_f(s + 1);
+	ft_putstr(s);
+	ft_putchar('\n');
 }

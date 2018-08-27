@@ -6,15 +6,15 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/20 11:15:13 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/20 11:18:12 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/15 20:36:35 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
 int	ft_toupper(int c)
 {
-	if (c >= 97 && c <= 122)
+	if (c >= 'a' && c <= 'z')
 		return (c - 32);
 	else
 		return (c);

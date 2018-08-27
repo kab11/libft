@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/11 09:14:19 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/13 21:19:25 by kblack           ###   ########.fr       */
+/*   Created: 2018/08/08 22:08:53 by kblack            #+#    #+#             */
+/*   Updated: 2018/08/15 20:36:04 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_strlen(const char *str)
+void	ft_swap(int *a, int *b)
 {
-	int	i;
+	int	holder;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	holder = *a;
+	*a = *b;
+	*b = holder;
 }

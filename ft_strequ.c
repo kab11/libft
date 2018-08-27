@@ -6,15 +6,15 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/23 14:46:38 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/23 21:18:18 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/15 20:31:37 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-int ft_strequ(char const *s1, char const *s2)
+int			ft_strequ(char const *s1, char const *s2)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s1 || !s2)
 		return (0);

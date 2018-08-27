@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/11 09:14:19 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/13 21:19:25 by kblack           ###   ########.fr       */
+/*   Created: 2018/08/08 23:49:56 by kblack            #+#    #+#             */
+/*   Updated: 2018/08/13 21:53:14 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
 
-int		ft_strlen(const char *str)
+int			ft_list_size(t_list *begin_list)
 {
-	int	i;
+	t_list	*current;
+	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
+	current = begin_list;
+	if (current)
+	{
+		while (current->next)
+		{
+			current = current->next;
+			i++;
+		}
 		i++;
+	}
 	return (i);
 }

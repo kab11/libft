@@ -6,27 +6,27 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/23 21:59:34 by kblack            #+#    #+#             */
-/*   Updated: 2018/07/24 00:22:43 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/19 21:31:12 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "includes/libft.h"
 
-char *ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
-	size_t start;
-	size_t end;
+	int	start;
+	int	end;
 
 	start = 0;
+	end = 0;
 	if (!s)
 		return (NULL);
-	while (ft_isspace(s[start]))
+	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
 	if (s[start] == '\0')
-		return (ft_strdup(s + start));
+		return (ft_strdup((char *)s + start));
 	end = ft_strlen(s) - 1;
 	while (ft_isspace(s[end]))
 		end--;
-	printf("%s\n%zu\n%zu\n", s, start, end);
-	return (ft_strsub(s, start, end - start + 1));
+	return (ft_strsub(s, start, (end - start + 1)));
 }
