@@ -6,7 +6,7 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/18 13:54:12 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/19 00:05:14 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:23:14 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,12 @@ int					ft_strequ(char const *s1, char const *s2);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 char				*ft_strjoin(char const *s1, char const *s2);
-unsigned int		ft_strlcat(char *dest, char *src, unsigned int size);
-int					ft_strlen(const char *str);
+size_t				ft_strlcat(char *dest, char *src, unsigned int size);
+size_t				ft_strlen(const char *str);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char				*ft_strncat(char *restrict s1, const char *restrict s2, size_t n);
+char				*ft_strncat(char *restrict s1, const char *restrict s2,
+						size_t n);
 int					ft_strncmp (const char *str1, const char *str2, size_t n);
 char				*ft_strncpy(char *dst, char *src, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);

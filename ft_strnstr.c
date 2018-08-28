@@ -6,7 +6,7 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/21 12:02:41 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/22 23:08:44 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 15:49:44 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,4 @@ char		*ft_strnstr(const char *str, const char *substr, size_t len)
 		str++;
 	}
 	return (NULL);
-
 }

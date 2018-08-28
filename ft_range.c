@@ -6,7 +6,7 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 23:43:02 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/08 23:43:46 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 15:47:25 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ int		*ft_range(int min, int max)
 	int	*str;
 
 	count = 0;
-	str = (int*)malloc(sizeof(int) * (max -min));
-
+	str = (int*)malloc(sizeof(int) * (max - min));
 	if (min >= max)
 	{
 		return (0);
