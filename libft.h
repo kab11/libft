@@ -6,7 +6,7 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/18 13:54:12 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 20:54:27 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/28 15:24:37 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
-
-# define BUFF_SIZE 100
-# define MALLCHECK(x) if (!x) return (-1);
-# define IS_SPACE(x) (x == ' ' || x == '\t' || x == '\r' || x == '\f')
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *str, size_t n);
@@ -90,11 +86,10 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+size_t				ft_int_len(int n);
 int					ft_isspace(int c);
-int					ft_words(char const *str, const char ch);
-char				*ft_mem_alloc(char const *str, size_t n);
-void				ft_front_list(t_list **begin_list, void *data);
 int					ft_list_size(t_list *begin_list);
-int					ft_power(int nb, int power);
+char				*ft_mem_alloc(char const *str, size_t n);
+int					ft_words(char const *str, const char ch);
 
 #endif

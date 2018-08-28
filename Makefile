@@ -6,7 +6,7 @@
 #    By: kblack <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/18 13:56:41 by kblack            #+#    #+#              #
-#    Updated: 2018/08/27 20:57:21 by kblack           ###   ########.fr        #
+#    Updated: 2018/08/28 15:24:44 by kblack           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,18 +70,17 @@ SRC		=	ft_atoi.c \
 				ft_lstdelone.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
+				ft_int_len.c \
 				ft_isspace.c \
-				ft_words.c \
-				ft_mem_alloc.c \
-				ft_front_list.c \
 				ft_list_size.c \
-				ft_power.c
+				ft_mem_alloc.c \
+				ft_words.c
 
 HDR = libft.h
 OFL = $(SRC:.c=.o)
 FLGS = -g -Wall -Wextra -Werror
 $(NAME):
-	gcc $(FLGS) -c $(SRC) -I./includes/
+	gcc $(FLGS) -c $(SRC) -I.
 	ar rc $(NAME) $(OFL)
 	ranlib $(NAME)
 all: $(NAME)
