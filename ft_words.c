@@ -1,42 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_words.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 22:05:11 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 20:37:18 by kblack           ###   ########.fr       */
+/*   Created: 2018/08/27 20:28:41 by kblack            #+#    #+#             */
+/*   Updated: 2018/08/27 20:38:08 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_strsplit(char const *s, char c)
+int				ft_words(char const *str, const char ch)
 {
+	const char	*string;
 	int			i;
-	int			k;
-	char		**array;
+	int			wc;
 
-	k = 0;
-	if (!s || !c)
-		return (NULL);
-	i = ft_words(s, c);
-	if (!(array = (char **)malloc(sizeof(char *) * (i + 1))))
-		return (NULL);
-	array[i] = NULL;
-	while (s[i] != '\0')
+	string = str;
+	i = 0;
+	wc = 0;
+	while (string[i] != '\0')
 	{
-		while (*s == c && *s)
-			s++;
-		i = 0;
-		if (s[i] != c)
+		if (string[i] == ch)
+			i++;
+		if (string[i] != ch && string[i])
 		{
-			while (s[i] != c && s[i])
+			wc++;
+			while (string[i] != ch && string[i])
 				i++;
-			array[k++] = ft_mem_alloc(s, i);
-			s += i;
 		}
 	}
-	return (array);
+	return (wc);
 }

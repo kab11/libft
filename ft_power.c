@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/09 22:05:11 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 20:37:18 by kblack           ###   ########.fr       */
+/*   Created: 2018/08/27 20:53:33 by kblack            #+#    #+#             */
+/*   Updated: 2018/08/27 20:55:05 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char			**ft_strsplit(char const *s, char c)
+int	ft_power(int nb, int power)
 {
-	int			i;
-	int			k;
-	char		**array;
+	int hold;
 
-	k = 0;
-	if (!s || !c)
-		return (NULL);
-	i = ft_words(s, c);
-	if (!(array = (char **)malloc(sizeof(char *) * (i + 1))))
-		return (NULL);
-	array[i] = NULL;
-	while (s[i] != '\0')
+	hold = 1;
+	if (power < 0 || nb < 0)
 	{
-		while (*s == c && *s)
-			s++;
-		i = 0;
-		if (s[i] != c)
-		{
-			while (s[i] != c && s[i])
-				i++;
-			array[k++] = ft_mem_alloc(s, i);
-			s += i;
-		}
+		return (0);
 	}
-	return (array);
+	if (power == 1)
+	{
+		hold = power * power;
+		return (hold);
+	}
+	while (power > 2)
+	{
+		hold = nb * nb;
+		power--;
+	}
 }
