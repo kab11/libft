@@ -6,7 +6,7 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 17:13:56 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 18:57:29 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 20:17:21 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,21 @@
 
 size_t			ft_strlcat(char *dest, char *src, unsigned int size)
 {
-	unsigned	int c1;
-	unsigned	int c2;
-	unsigned	int c3;
+	unsigned	int i;
+	unsigned	int j;
 
-	c1 = 0;
-	c2 = 0;
-	c3 = 0;
-	while (dest[c1] != '\0')
-		c1++;
-	while (src[c3] != '\0')
-		c3++;
-	if (c1 <= size)
+	i = 0;
+	while (dest[i] != '\0' && i < size)
+		i++;
+	j = 0;
+	if (size < i + 1)
+		return (size + ft_strlen(src));
+	while (src[j] != '\0' && (i + j) < size - 1)
 	{
-		while (src[c2] != '\0' && c2 < (size - c1 - 1))
-		{
-			dest[c2 + c1] = src[c2];
-			c2++;
-		}
+		dest[i + j] = src[j];
+		j++;
 	}
-	if (size != 0 && c1 <= size)
-		dest[c1 + c2] = '\0';
-	if (c1 > size)
-		return (size + c3);
-	else
-		return (c1 + c3);
+	if (i + j < size)
+		dest[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
