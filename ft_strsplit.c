@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/09 22:05:11 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/23 19:40:50 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 19:00:19 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 static int		words(char const *str, const char ch)
 {

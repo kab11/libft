@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/19 10:18:01 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/20 01:40:58 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 19:00:34 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char		*ft_strstr(const char *str, const char *substr)
 {

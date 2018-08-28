@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/23 21:51:36 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/23 03:42:28 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:48:50 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	ft_isspace(int c)
 {

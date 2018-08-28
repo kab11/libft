@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/22 20:14:27 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 17:08:53 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:55:41 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_strclr(char *s)
 {

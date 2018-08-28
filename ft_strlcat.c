@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/13 17:13:56 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 18:21:33 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:57:29 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 size_t			ft_strlcat(char *dest, char *src, unsigned int size)
 {

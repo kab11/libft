@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/22 23:16:21 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/27 15:48:28 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:49:08 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 static size_t		int_len(int n)
 {

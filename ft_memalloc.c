@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/22 20:56:31 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/15 20:25:33 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:51:49 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void		*ft_memalloc(size_t size)
 {

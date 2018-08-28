@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/05 21:24:39 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/23 03:53:28 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 18:51:13 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 t_list		*ft_lstnew(void const *content, size_t content_size)
 {

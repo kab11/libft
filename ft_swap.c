@@ -6,11 +6,11 @@
 /*   By: kblack <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/08 22:08:53 by kblack            #+#    #+#             */
-/*   Updated: 2018/08/15 20:36:04 by kblack           ###   ########.fr       */
+/*   Updated: 2018/08/27 19:02:32 by kblack           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_swap(int *a, int *b)
 {
