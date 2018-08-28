@@ -6,7 +6,7 @@
 #    By: kblack <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/07/18 13:56:41 by kblack            #+#    #+#              #
-#    Updated: 2018/08/17 21:02:20 by kblack           ###   ########.fr        #
+#    Updated: 2018/08/27 19:11:33 by kblack           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,11 +69,7 @@ SRC		=	ft_atoi.c \
 				ft_lstdel.c \
 				ft_lstdelone.c \
 				ft_lstiter.c \
-				ft_lstmap.c \
-				ft_isspace.c \
-				ft_swap.c \
-				ft_range.c \
-				ft_list_size.c
+				ft_lstmap.c
 
 HDR = libft.h
 OFL = $(SRC:.c=.o)
